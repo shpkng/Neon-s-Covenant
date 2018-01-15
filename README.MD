@@ -1,3 +1,4 @@
+
 Jan 15,2018
 ThirdPersonUserControl.cs 从StandartAsset中复制并进行少量定制
 ThirdPersonCharacter.cs 从StandartAsset中复制
@@ -11,3 +12,4 @@ AutoTransparent.cs 新增，用以处理tag为"Building"的gameObject在受到Ca
 
 Dec 24, 2017
 初始版本测试，相机、光路调试。
+
