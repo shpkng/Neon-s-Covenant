@@ -300,6 +300,8 @@
     <Compile Include="Assets\_Script\AutoTransparent.cs" />
     <Compile Include="Assets\_Script\CameraLook.cs" />
     <Compile Include="Assets\_Script\Deserted\ThirdPersonController.cs" />
+    <Compile Include="Assets\_Script\Enemy.cs" />
+    <Compile Include="Assets\_Script\EnemyRadar.cs" />
     <Compile Include="Assets\_Script\GameController.cs" />
     <Compile Include="Assets\_Script\Interact.cs" />
     <Compile Include="Assets\_Script\LineRoad.cs" />

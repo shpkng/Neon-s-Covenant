@@ -19,6 +19,8 @@ public class ThirdPersonUserControl : MonoBehaviour
 	private int lpValue;
 	private int attackValue;
 
+	public int Hp { set; get; }
+
 	private void Start()
 	{
 		// get the transform of the main camera
@@ -68,7 +70,8 @@ public class ThirdPersonUserControl : MonoBehaviour
 		{
 			if (gameController.InteractableObject!=null)
 			{
-				gameController.InteractableObject.E();
+				//gameController.InteractableObject.E(this.gameObject.GetComponent<Transform>());
+				gameController.InteractableObject.E(this.transform);
 			}
 			else
 			{

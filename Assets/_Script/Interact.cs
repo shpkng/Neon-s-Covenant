@@ -5,30 +5,57 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
 
-	public GameController gameController;
+	GameController gameController;
 	public string typeOfThisObject;
+	public Interact anotherInteractableObject;
 
+	[SerializeField]
+	bool portable = false;
+
+
+	private void Start()
+	{
+		gameController = GameObject.Find("GameController").GetComponent<GameController>();
+	}
 
 	/// <summary>
 	/// 按E可赛艇
-	/// </summary>
-	public void E()
+	/// </summar
+	public void E(Transform player)
 	{
 		switch (typeOfThisObject)
 		{
-			case "Portal": Portal(); break;
-			case "Else":Else() ; break;
+			case "Portal": Portal(player); break;
+
+			case "Else": Else(); break;
 		}
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		gameController.InteractableObject = this;
+		gameController.Notification();
 	}
 
-	void Portal()
-	{;
+	private void OnTriggerExit(Collider other)
+	{
+		gameController.InteractableObject = null;
+	}
+
+	void Portal(Transform player)
+	{
+
 		Debug.Log("Portal");
+		if (portable)
+		{
+
+			player.position = anotherInteractableObject.GetComponent<Transform>().position;
+
+		}
+		else
+		{
+			Debug.Log("This is A One-way Portal");
+		}
 	}
 
 	void Else()
@@ -37,3 +64,7 @@ public class Interact : MonoBehaviour
 	}
 
 }
+
+//
+//命苦 刚打算追一个妹子 妹子就要出国 这日子没法过了
+//

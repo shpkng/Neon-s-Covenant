@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,5 +22,11 @@ public class GameController : MonoBehaviour
 	private void Update()
 	{
 		lpText.text = LpValue.ToString();					//每帧刷一次能量槽
+	}
+
+	//显示可交互物体的简介
+	internal void Notification()
+	{
+		
 	}
 }
