@@ -1,3 +1,10 @@
+Jan 18,2018
+Interact.cs 更新了传送门的实现
+Enemy.cs 更新了功能
+EnemyRadar.cs 新增，指示特定Enemy所在的位置
+修补了一些小bug
+别的  忘了
+
 Jan 15,2018
 ThirdPersonUserControl.cs 从StandartAsset中复制并进行少量定制
 ThirdPersonCharacter.cs 从StandartAsset中复制
